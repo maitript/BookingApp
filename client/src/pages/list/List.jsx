@@ -18,7 +18,7 @@ const List = () => {
   const [max, setMax] = useState(undefined);
 
   const {data,loading,error,reFetch} = useFetch(
-    `http://localhost:8800/api/hotels?city=${destination}`)
+    `${process.env.REACT_APP_BASE_URL}/api/hotels?city=${destination}`)
   
   const handleClick =() => {
     reFetch()
